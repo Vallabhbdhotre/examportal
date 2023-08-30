@@ -1,0 +1,22 @@
+.box-container{
+    margin-left: 30px;
+    transition: all;
+    transition-delay: 0.3s;
+   
+}
+.cards{
+    margin: 5px;
+    padding: 5px;
+    color: aliceblue;
+    border: 2px solid rgb(184, 174, 174);
+    border-radius: 10px;
+    display: inline-block;
+    width: 155px;
+    height:max-content;
+    text-align: center;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+}
+.cards:hover{
+    box-shadow: 0 0 5px white;
+}
