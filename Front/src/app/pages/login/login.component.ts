@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { UserServiceService } from 'src/app/services/user-service.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoginService } from 'src/app/services/login.service';
+
 
 @Component({
   selector: 'app-login',
@@ -7,27 +9,29 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  
-  constructor(private log:UserServiceService){}
 
-  public user ={
-    username:'',
-    password:'',
-   
+  constructor( private login:LoginService,private snack: MatSnackBar) { }
+
+  public logindata = {
+    username: '',
+    password: '',
+
   }
-  onlogin(){
-    
-      return this.log.userpost(this.user).subscribe(
-        (res)=>{
-          console.log("success",res);
+  onlogin() {
+
+
+    if (this.logindata.username.trim() == "" || this.logindata.username == null ||
+      this.logindata.password.trim() == "" || this.logindata.password == null)
+       {
+         this.snack.open('All fields are required !', '', { duration: 1500, verticalPosition: 'top' })
         }
-         // localStorage.setItem("userdata",JSON.stringify(this.user));
-      )
-     
-     
-  
-    
-  
-
+        return this.login.generatetoken(this.logindata).subscribe(
+          (data)=>{
+            console.log("logged in")
+            console.log(data)
+            this.snack.open('Logged In!', '', { duration: 1500, verticalPosition: 'top' })
+          });
   }
+
 }
+
