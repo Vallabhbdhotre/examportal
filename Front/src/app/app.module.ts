@@ -14,6 +14,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule} from '@angular/common/http';
 import { MenuComponent } from './pages/menu/menu.component'
 import { UserServiceService } from './services/user-service.service';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,9 @@ import { UserServiceService } from './services/user-service.service';
     MatButtonModule,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    MatIconModule
 
   ],
   providers: [UserServiceService ],
