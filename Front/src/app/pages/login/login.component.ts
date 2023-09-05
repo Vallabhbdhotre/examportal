@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 
 
@@ -10,7 +11,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent {
 
-  constructor( private login:LoginService,private snack: MatSnackBar) { }
+  constructor( private login:LoginService,private snack: MatSnackBar,private router:Router) { }
 
   public logindata = {
     username: '',
@@ -29,8 +30,10 @@ export class LoginComponent {
           (data)=>{
             console.log("logged in")
             console.log(data)
-            this.snack.open('Logged In!', '', { duration: 1500, verticalPosition: 'top' })
+            this.snack.open('You are logged in !', '', { duration: 1500, verticalPosition: 'top' })
+            this.router.navigate(['/dashboard'])
           });
+   
   }
 
 }

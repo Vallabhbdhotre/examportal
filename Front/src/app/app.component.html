@@ -2,15 +2,17 @@
 <nav class="navbar">
     <ul>
         <img class="img1" src="../assets/data/navlogo.png" routerLink="/Menu" height="50px" widht="50px">
-        <p class="name">Examthink</p>
+        <p class="name" routerLink="/Menu">Examthink</p>
         <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" ></mat-icon> -->
-        <li class="list"><a routerLink="/Home"  routerLinkActive="active">Home</a></li>
+        <li class="list"><a routerLink="/Home" routerLinkActive="active">Home</a></li>
         <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="login" ></mat-icon> -->
-        <li class="list"><a routerLink="/Log_in"  routerLinkActive="active">Sign in</a></li>
+        <li class="list"><a routerLink="/Log_in" routerLinkActive="active">Sign in</a></li>
         <li class="list"><a routerLink="/Sign_Up" routerLinkActive="active">Sign up</a></li>
+        <!-- <li class="list"><button class="btn" (click)="logout()"></button></li> -->
+
     </ul>
-    
-    
+
+
 </nav>
 
 <router-outlet></router-outlet>

@@ -9,20 +9,26 @@ import baseurl from './url';
 export class LoginService {
 
   constructor(private http:HttpClient) { }
+
   public getCurrentUser(){
     this.http.get(`${baseurl}/current-user`)
   }
+  
   //posting data to server
   public generatetoken(logindata:any){
 
     return this.http.post(`${baseurl}/generate-token`,logindata);
   }
+
+
   //set token in localstorage
   public loginuser(token: any){
     localStorage.setItem("token",token)
     return true;
     
   }
+
+
   //islogin : tocheck logged in or not
   public islogin(){
     let tokenstr=localStorage.getItem("token")

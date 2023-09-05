@@ -16,6 +16,13 @@ import { MenuComponent } from './pages/menu/menu.component'
 import { UserServiceService } from './services/user-service.service';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
+import { Set1Component } from './pages/menu/tests/set1/set1.component';
+import { Set2Component } from './pages/menu/tests/set2/set2.component';
+import { Set3Component } from './pages/menu/tests/set3/set3.component';
+import { Set4Component } from './pages/menu/tests/set4/set4.component';
+import { Set5Component } from './pages/menu/tests/set5/set5.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +31,14 @@ import {MatIconModule} from '@angular/material/icon';
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    Set1Component,
+    Set2Component,
+    Set3Component,
+    Set4Component,
+    Set5Component,
+    DashboardComponent,
+    
     
   ],
   imports: [

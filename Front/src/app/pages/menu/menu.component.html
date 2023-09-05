@@ -1,6 +1,7 @@
 <h1>tests</h1>
-<div class="box-container" >
-    <div class="cards" >
+<div class="box-container">
+
+    <div class="cards" routerLink="/set1">
         <div class="image"></div>
         <div class="heading">
             <h4 style="text-transform: uppercase;">java</h4>
@@ -9,10 +10,10 @@
         <div class="content">
             <p>Basics,OOPs concepts</p>
             <p>Questions :30</p>
-            <p>Marks :30</p>
+
         </div>
     </div>
-    <div class="cards">
+    <div class="cards" routerLink="/set2">
         <div class="image"></div>
         <div class="heading">
             <h4 style="text-transform: uppercase;">C++</h4>
@@ -21,10 +22,9 @@
         <div class="content">
             <p>Basics,OOPs concepts</p>
             <p>Questions :30</p>
-            <p>Marks :30</p>
         </div>
     </div>
-    <div class="cards">
+    <div class="cards" routerLink="/set3">
         <div class="image"></div>
         <div class="heading">
             <h4 style="text-transform: uppercase;">python</h4>
@@ -33,10 +33,10 @@
         <div class="content">
             <p>Basics,OOPs concepts</p>
             <p>Questions :30</p>
-            <p>Marks :30</p>
+            
         </div>
     </div>
-    <div class="cards">
+    <div class="cards" routerLink="/set4">
         <div class="image"></div>
         <div class="heading">
             <h4 style="text-transform: uppercase;">sql</h4>
@@ -45,10 +45,10 @@
         <div class="content">
             <p>Subqueries ,Nested queries</p>
             <p>Questions :30</p>
-            <p>Marks :30</p>
+            
         </div>
     </div>
-    <div class="cards">
+    <div class="cards" routerLink="/set5">
         <div class="image"></div>
         <div class="heading">
             <h4 style="text-transform: uppercase;">javascript</h4>
@@ -57,9 +57,11 @@
         <div class="content">
             <p>Basics,OOPs concepts</p>
             <p>Questions :30</p>
-            <p>Marks :30</p>
+           
         </div>
     </div>
+</div>
+<!-- 
     <div class="cards">
         <div class="image"></div>
         <div class="heading">
@@ -85,4 +87,6 @@
         </div>
     </div>
 </div>
+ -->
 
+<router-outlet></router-outlet>
