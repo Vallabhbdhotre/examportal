@@ -22,7 +22,11 @@ import { Set3Component } from './pages/menu/tests/set3/set3.component';
 import { Set4Component } from './pages/menu/tests/set4/set4.component';
 import { Set5Component } from './pages/menu/tests/set5/set5.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
+import { AboutComponent } from './pages/about/about.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProgressComponent } from './pages/progress/progress.component';
+import { ResultsComponent } from './pages/results/results.component';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +42,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     Set4Component,
     Set5Component,
     DashboardComponent,
-    
-    
+    AboutComponent,
+    ProfileComponent,
+    ProgressComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,MatCardModule
 
   ],
   providers: [UserServiceService ],

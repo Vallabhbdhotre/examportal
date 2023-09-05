@@ -11,6 +11,10 @@ import { Set3Component } from './pages/menu/tests/set3/set3.component';
 import { Set4Component } from './pages/menu/tests/set4/set4.component';
 import { Set5Component } from './pages/menu/tests/set5/set5.component';
 import { authGuardGuard } from './Guard/auth-guard.guard';
+import { AboutComponent } from './pages/about/about.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProgressComponent } from './pages/progress/progress.component';
+import { ResultsComponent } from './pages/results/results.component';
 
 
 const routes: Routes = [
@@ -18,10 +22,12 @@ const routes: Routes = [
   { path: 'Menu', component: MenuComponent },
   { path: 'Home', component: HomeComponent },
   { path: 'Sign_Up', component: SignupComponent },
-  {
-    path: 'Log_in', component: LoginComponent,
-    children: [{ path: 'dashboard', component: DashboardComponent }]
-  },
+  { path: 'About', component: AboutComponent },
+  { path: 'Log_in', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'progress', component: ProgressComponent },
+  { path: 'results', component: ResultsComponent },
   { path: 'set1', component: Set1Component, canActivate: [authGuardGuard] },
   { path: 'set2', component: Set2Component, canActivate: [authGuardGuard] },
   { path: 'set3', component: Set3Component, canActivate: [authGuardGuard] },
