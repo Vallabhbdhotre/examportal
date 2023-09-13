@@ -12,7 +12,7 @@ export const authGuardGuard: CanActivateFn = (route, state) => {
     return true;
   }
   else
-  snack.open('You Need to Sign-in first !','',{duration:1500,verticalPosition:'top'})
+  snack.open('You Need To Sign-In First !','',{duration:1500,verticalPosition:'top'})
   router.navigate(['/Log_in']);
   return false;
   

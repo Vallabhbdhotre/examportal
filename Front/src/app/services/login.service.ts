@@ -12,6 +12,7 @@ export class LoginService {
 
   public getCurrentUser(){
     this.http.get(`${baseurl}/current-user`)
+    
   }
   
   //posting data to server

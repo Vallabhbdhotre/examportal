@@ -27,13 +27,13 @@ export class LoginComponent {
          this.snack.open('All fields are required !', '', { duration: 1500, verticalPosition: 'top' })
         }
         return this.login.generatetoken(this.logindata).subscribe(
-          (data)=>{
+          (data:any)=>{
             console.log("logged in")
             console.log(data)
-            this.snack.open('You are logged in !', '', { duration: 1500, verticalPosition: 'top' })
+            this.snack.open('You Are Logged In !', '', { duration: 1500, verticalPosition: 'top' })
             this.router.navigate(['/dashboard'])
+            this.login.loginuser(data.token)
           });
-   
   }
 
 }
