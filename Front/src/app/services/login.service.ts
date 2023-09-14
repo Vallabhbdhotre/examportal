@@ -9,7 +9,7 @@ import baseurl from './url';
 export class LoginService {
 
   constructor(private http:HttpClient) { }
-
+   //to get curent user
   public getCurrentUser(){
     this.http.get(`${baseurl}/current-user`)
     
@@ -41,7 +41,7 @@ export class LoginService {
     }
   }
 
-
+ //logging out 
   public logout(){
     localStorage.removeItem("token")
     localStorage.removeItem('user')

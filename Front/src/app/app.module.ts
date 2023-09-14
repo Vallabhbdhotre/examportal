@@ -11,7 +11,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './pages/menu/menu.component'
 import { UserServiceService } from './services/user-service.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -30,6 +30,8 @@ import { MatCardModule } from '@angular/material/card';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule} from '@angular/fire/compat/database'
 import {firebaseConfig} from './services/enviroment'
+import { authorization } from './services/Authorization.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,12 @@ import {firebaseConfig} from './services/enviroment'
   
    
   ],
-  providers: [UserServiceService],
-  bootstrap: [AppComponent]
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass:authorization,
+    multi:true
+  }],
+  bootstrap: [AppComponent
+    ]
 })
 export class AppModule { }
