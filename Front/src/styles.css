@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-
+*{
+    margin: 0%;
+    padding: 0%;
+}
 html,
 body {
     height: 100%;
@@ -14,12 +17,16 @@ body {
 }
 
 h1 {
-    margin: 10px;
+    
     color: aliceblue;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
 
+}
+.logheader{
+    position: relative;
+    top:5rem ;
 }
 
 .form-group {
@@ -38,6 +45,7 @@ h1 {
     border-radius: 20px;
     overflow: scroll;
 }
+
 .container::-webkit-scrollbar{
     display: none;
 
@@ -62,7 +70,7 @@ label {
     border-radius: 10px;
     background-color: aliceblue;
     width: 100%;
-    height: 70px;
+    height: 4rem;
     overflow: hidden;
    
   

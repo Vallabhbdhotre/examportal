@@ -9,8 +9,9 @@ import { LoginService } from './services/login.service';
 })
 export class AppComponent {
   title = 'Front';
-  constructor(private service:LoginService){}
-  // logout(){
-  //   return this.service.logout();
-  // }
+  constructor(public service:LoginService){}
+  logout(){
+    this.service.logout();
+    window.location.reload();
+  }
 }

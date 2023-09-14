@@ -1,2 +1,2 @@
-let baseurl ='https://examportal-a90ca-default-rtdb.firebaseio.com';
+let baseurl ='http://localhost:8080 ';
 export default baseurl;

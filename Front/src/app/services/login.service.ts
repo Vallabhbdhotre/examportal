@@ -33,12 +33,10 @@ export class LoginService {
   //islogin : tocheck logged in or not
   public islogin(){
     let tokenstr=localStorage.getItem("token")
-    if(tokenstr==undefined || tokenstr==null || tokenstr=="")
-    {
+    if(tokenstr==undefined || tokenstr==null || tokenstr==" ")
       return false;
-    }else{
+    else
       return true;
-    }
   }
 
  //logging out 

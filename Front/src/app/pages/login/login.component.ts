@@ -31,8 +31,9 @@ export class LoginComponent {
             console.log("logged in")
             console.log(data)
             this.snack.open('You Are Logged In !', '', { duration: 1500, verticalPosition: 'top' })
-            this.router.navigate(['/dashboard'])
             this.login.loginuser(data.token)
+            this.router.navigate(['/dashboard'])
+           
           });
   }
 
