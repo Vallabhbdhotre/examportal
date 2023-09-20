@@ -6,11 +6,11 @@
         <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" ></mat-icon> -->
         <li class="list"><a routerLink="/Home" routerLinkActive="active">Home</a></li>
         <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="login" ></mat-icon> -->
-        <li class="list"><a routerLink="/Log_in" routerLinkActive="active" *ngIf="service.islogin">Signin</a></li>
-        <li class="list"><a routerLink="/Sign_Up" routerLinkActive="active"*ngIf="service.islogin">Signup</a></li>
-        <li class="list"><a (click)="logout()" *ngIf="!service.islogin">Signout</a></li>
+        <li class="list"><a routerLink="/Log_in" routerLinkActive="active" *ngIf="!service.islogin">Signin</a></li>
+        <li class="list"><a routerLink="/Sign_Up" routerLinkActive="active"*ngIf="!service.islogin">Signup</a></li>
+        <li class="list"><a (click)="logout()" *ngIf="service.islogin">Signout</a></li>
         <!-- <li class="list"><a routerLink="dashboard" routerLinkActive="active">dashboard</a></li> -->
-        <li class="list"><a *ngIf="!service.islogin">{{service.getuserdata().username}}</a></li>
+        <!-- <li class="list"><a *ngIf="service.islogin">{{service.getuserdata().username}}</a></li> -->
     </ul>
 
 

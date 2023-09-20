@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from './services/login.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,9 +10,10 @@ import { LoginService } from './services/login.service';
 })
 export class AppComponent {
   title = 'Front';
-  constructor(public service:LoginService){}
+  constructor(public service:LoginService ,private route:Router){}
   logout(){
     this.service.logout();
-    window.location.reload();
+    this.route.navigate(['Log_in'])
+
   }
 }
