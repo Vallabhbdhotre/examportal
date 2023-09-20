@@ -13,8 +13,8 @@ export class SignupComponent {
   [x: string]: any;
   constructor(private sign:UserServiceService, private router: Router,private snack1:MatSnackBar) { }
   public user = {
-    username: '',
-    fname: '',
+    userName: '',
+    fName: '',
     lname: '',
     email: '',
     password: '',
@@ -22,20 +22,23 @@ export class SignupComponent {
   }
   emailPattern :any | RegExp = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
   onSubmit() {
-    if(this.user.username.trim() =="" || this.user.username.trim() == null )
+    if(this.user.userName.trim() =="" || this.user.userName.trim() == null )
     {
       this.snack1.open('All fields are required ! ' ,'',{duration:1500,verticalPosition:'top'})
     }
-    return this.sign.userpost(this.user).subscribe(
+    
+     this.sign.userpost(this.user).subscribe(
       (res)=>{
         console.log("success",res)
         this.snack1.open('Registerd Succesfully','',{duration:2000,verticalPosition:'top'})
         this.router.navigate(['/Log_in']);
 
       }
-    )
+    );
    
-    // localStorage.setItem("userdata",JSON.stringify(this.user));
+    //  localStorage.setItem("userdata",JSON.stringify(this.user));
+    //  this.snack1.open('Registerd Succesfully','',{duration:2000,verticalPosition:'top'})
+    //  this.router.navigate(['/Log_in']);
 
   }
 

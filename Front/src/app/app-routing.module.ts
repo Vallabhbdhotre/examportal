@@ -15,6 +15,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { ResultsComponent } from './pages/results/results.component';
+import { CompletedTestsComponent } from './pages/completed-tests/completed-tests.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,7 @@ const routes: Routes = [
   { path: 'Sign_Up', component: SignupComponent },
   { path: 'About', component: AboutComponent },
   { path: 'Log_in', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent ,canActivate: [authGuardGuard] },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'progress', component: ProgressComponent },
   { path: 'results', component: ResultsComponent },
@@ -32,7 +33,9 @@ const routes: Routes = [
   { path: 'set2', component: Set2Component, canActivate: [authGuardGuard] },
   { path: 'set3', component: Set3Component, canActivate: [authGuardGuard] },
   { path: 'set4', component: Set4Component, canActivate: [authGuardGuard] },
-  { path: 'set5', component: Set5Component, canActivate: [authGuardGuard] }
+  { path: 'set5', component: Set5Component, canActivate: [authGuardGuard] },
+  { path: 'mytests', component: CompletedTestsComponent }
+
 
 ];
 

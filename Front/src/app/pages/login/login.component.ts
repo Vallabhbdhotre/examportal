@@ -21,8 +21,8 @@ export class LoginComponent {
   onlogin() {
 
 
-    if (this.logindata.username.trim() == "" || this.logindata.username == null ||
-      this.logindata.password.trim() == "" || this.logindata.password == null)
+    if (this.logindata.username.trim() == " " || this.logindata.username == null ||
+      this.logindata.password.trim() == " " || this.logindata.password == null)
        {
          this.snack.open('All fields are required !', '', { duration: 1500, verticalPosition: 'top' })
         }

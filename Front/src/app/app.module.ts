@@ -32,6 +32,7 @@ import { AngularFireDatabaseModule} from '@angular/fire/compat/database'
 import {firebaseConfig} from './services/enviroment'
 import { authorization } from './services/Authorization.interceptor';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { authorization } from './services/Authorization.interceptor';
     ProfileComponent,
     ProgressComponent,
     ResultsComponent,
+   
   ],
   imports: [
     BrowserModule,

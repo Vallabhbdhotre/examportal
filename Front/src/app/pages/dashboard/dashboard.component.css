@@ -1,0 +1,23 @@
+.profilepic{
+    border-radius: 50%;
+    float:right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.navdash{
+position: relative;
+top:70px
+}
+.dashitems{
+    padding: 3px;
+    color: white;
+    list-style: none;
+    margin: 7px 12px 5px   ;
+    cursor: pointer;
+    display: inline-block;
+}
+nav .dashitems:hover{
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}

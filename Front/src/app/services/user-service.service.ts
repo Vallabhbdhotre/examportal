@@ -9,6 +9,6 @@ export class UserServiceService {
 
   constructor(private http:HttpClient) { }
   userpost(user:any){
-     return this.http.post(`${baseurl}` ,user)
+     return this.http.post(`${baseurl}/user/` ,user)
   }
 }

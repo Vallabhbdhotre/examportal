@@ -3,9 +3,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    top: 100px;
 }
 .box{
-    margin-top: 50px;
+    
     color: aliceblue;
     display: inline-block;
     font-size:medium ;
