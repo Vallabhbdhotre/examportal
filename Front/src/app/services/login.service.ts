@@ -25,7 +25,7 @@ export class LoginService {
 
   //set token in localstorage
   public loginuser(token: any){
-    localStorage.setItem("token",token)
+    localStorage.setItem("userdata",token)
     
     
   }
@@ -33,7 +33,7 @@ export class LoginService {
 
   //islogin : tocheck logged in or not
   public islogin(){
-    let tokenstr=localStorage.getItem("token")
+    let tokenstr=localStorage.getItem("userData")
     if(tokenstr==undefined || tokenstr==null || tokenstr==" ")
       return false;
     else
@@ -42,7 +42,7 @@ export class LoginService {
 
  //logging out 
   public logout(){
-    localStorage.removeItem("token")
+    localStorage.removeItem("userdata")
     localStorage.removeItem('user')
     return true;
   }

@@ -23,8 +23,8 @@ export class LoginComponent {
     });
   }
 
-  get controls(){
-    return this.loginForm.controls
+  get controls() {
+    return this.loginForm.controls;
   }
 
   // public logindata = {
@@ -37,6 +37,10 @@ export class LoginComponent {
       this.login.generatetoken(this.loginForm.value).subscribe({
         next: (res) => {
           console.log("this is res ", res);
+          this.snack.open("You Are Logged In !", "", {
+            duration: 2000,
+            verticalPosition: "top",
+          });
           if (res) {
             localStorage.setItem("userData", JSON.stringify(res));
             this.router.navigate(["/dashboard"]);
@@ -52,7 +56,7 @@ export class LoginComponent {
         duration: 1500,
         verticalPosition: "top",
       });
-      this.loginForm.markAllAsTouched()
+      this.loginForm.markAllAsTouched();
     }
 
     // if (
