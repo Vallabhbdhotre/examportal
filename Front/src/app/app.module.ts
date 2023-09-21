@@ -9,7 +9,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './pages/menu/menu.component'
@@ -66,7 +66,7 @@ import { authorization } from './services/Authorization.interceptor';
     MatIconModule, MatCardModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-  
+    ReactiveFormsModule
    
   ],
   providers: [{

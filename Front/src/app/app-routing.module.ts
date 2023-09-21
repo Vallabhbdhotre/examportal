@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'About', component: AboutComponent },
   { path: 'Log_in', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:userName', component: ProfileComponent },
   { path: 'progress', component: ProgressComponent },
   { path: 'results', component: ResultsComponent },
   { path: 'set1', component: Set1Component, canActivate: [authGuardGuard] },

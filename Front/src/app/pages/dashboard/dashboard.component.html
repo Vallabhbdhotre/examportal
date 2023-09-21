@@ -2,10 +2,11 @@
 <div class="navdash">
     <nav>
         <div class="dash-nav-container">
-            <img class="profilepic" src="../../../assets/data/user1.png" height="45px" width="45px">
+            <img class="profilepic" src="../../../assets/data/user1.png" height="40px" width="40px">
+            <li class="dashitems username" *ngIf="service.islogin()" routerLink="/profile/:userName">{{service.getuserdata().username}}</li>
             <li class="dashitems" routerLink="/mytests">MyTests</li>
             <li class="dashitems">Certificates</li>
-            <li class="dashitems">Profile</li>
+            <li class="dashitems" (click)="profile(this.user.userName)">Profile</li>
         </div>
     </nav>
 </div>

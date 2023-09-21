@@ -1,2 +1,36 @@
-<p style="color:white;">profile works!</p>
-<p routerLink="/dashboard" style="color: white;">back!</p>
+<div class="global-container">
+    <div class="profileCard ">
+        <div class="content">
+            <img src="">
+        </div>
+        <hr style="color: white;">
+        <div class="content">
+            <label for="firstname"><b>UserName:</b></label>
+            {{user.UserName}}
+        </div>
+        <hr style="color: white;">
+        <div class="content">
+            <label for="firstname"><b>FirstName:</b></label>
+            {{user.fName}}
+        </div>
+        <hr style="color: white;">
+        <div class="content">
+            <label for="lastname"><b>LastName:</b></label>
+            {{user.lname}}
+        </div>
+        <hr style="color: white;">
+        <div class="content">
+            <label for="Email"><b>Email:</b></label>
+            {{user.email}}
+        </div>
+        <hr style="color: white;">
+        <div class="content">
+            <label for="phone"><b>Phone:</b></label>
+            {{user.phone}}
+        </div>
+        <hr style="color: white;">
+        <div class="text-center">
+            <button class="back-button" routerLink="/dashboard">Back to Dashboard</button>
+        </div>
+    </div>
+</div>

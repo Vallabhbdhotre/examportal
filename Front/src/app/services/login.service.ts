@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import baseurl from './url';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +12,7 @@ export class LoginService {
   constructor(private http:HttpClient) { }
    //to get curent user
   public getCurrentUser(){
-    this.http.get(`${baseurl}/current-user`)
+    return this.http.get(`${baseurl}/current-user`)
     
   }
   
@@ -25,7 +26,7 @@ export class LoginService {
   //set token in localstorage
   public loginuser(token: any){
     localStorage.setItem("token",token)
-    return true;
+    
     
   }
 
@@ -56,6 +57,10 @@ export class LoginService {
   //to set userdata
   public setuser(user:any){
     localStorage.setItem('user' ,JSON.stringify(user))
+  }
+  //get userdata by userName
+  getbyName(userName:any){
+    return this.http.get(`${baseurl}/${userName}`)
   }
 
 

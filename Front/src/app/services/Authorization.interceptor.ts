@@ -12,7 +12,8 @@ export class authorization implements HttpInterceptor{
     :Observable<HttpEvent<any>> {
         const token = this.login.gettoken()
         const auhtreq =req
-        if(token!= null){
+        
+        if(token!= null && this.login.islogin() ){
          auhtreq.clone({
             setHeaders:{
                 'Authorization':`Bearer ${token}`
