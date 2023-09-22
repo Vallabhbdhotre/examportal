@@ -42,7 +42,7 @@ export class LoginService {
 
  //logging out 
   public logout(){
-    localStorage.removeItem("userdata")
+    localStorage.removeItem("userData")
     localStorage.removeItem('user')
     return true;
   }

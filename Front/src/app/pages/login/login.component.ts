@@ -10,7 +10,7 @@ import { LoginService } from "src/app/services/login.service";
   styleUrls: ["./login.component.css"],
 })
 export class LoginComponent {
-  loginForm!: FormGroup;
+  loginForm: FormGroup;
   constructor(
     private login: LoginService,
     private snack: MatSnackBar,
@@ -52,10 +52,10 @@ export class LoginComponent {
       });
     } else {
       console.log("this form is invalid");
-      this.snack.open("All fields are required !", "", {
-        duration: 1500,
-        verticalPosition: "top",
-      });
+      // this.snack.open("All fields are required !", "", {
+      //   duration: 1500,
+      //   verticalPosition: "top",
+      // });
       this.loginForm.markAllAsTouched();
     }
 

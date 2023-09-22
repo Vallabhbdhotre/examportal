@@ -9,10 +9,8 @@ import { Userdata } from 'src/app/userdata';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  constructor(public service:LoginService,private route:Router){}
+  constructor(public service:LoginService){}
   user = new Userdata();
-  profile(userName:any){
-     return this.route.navigate(['/profile',userName])
-  }
+
   
 }
